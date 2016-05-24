@@ -21,36 +21,6 @@ body {
 
 
 /*
-* -- Game Box Styles --
-*/
-
-.gameBox{
-    background:black;
-    
-    
-width: 190px;
-    height: 120px;
-    
-
-    
-    
-}
-
-
-.gameBox {
-    
-    width: 190px;
-    height: 120px;
-    
-}
-
-
-.gameBox:hover{
-    opacity: 0.5;
-}
-
-
-/*
 * -- LAYOUT STYLES --
 */
 
@@ -60,11 +30,21 @@ width: 190px;
 
 .info-box{
     padding: 5em;
+    border: white solid;
+    border-radius: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    /* padding: 5em;
     background-color: #5e6262;
     border-radius: 10px;
     box-shadow: 0px 0px 50px white;
-    color: black;
+    color: black; */
 
+}
+
+.picture{
+    padding-left: 2em;
+    padding-top: 1em;
 }
 
 .l-box-lrg {
