@@ -40,13 +40,7 @@
                     
                     <div class="info-box pure-u-1 pure-u-md-16-24">
                         <div class="accountSettings">
-                            <?php
-					           session_start();
-					           if(!isset($_SESSION['user'])){
-						          header("Location: start.html");
-					           }
-					           echo "<p> You are logged in as " . $_SESSION['user'] . "!</p>";
-				            ?>
+                            <p>You are logged in as ________________.</p>
                             <h2>Your user information.</h2>
                             <div class="basicInfo pure-u-1 pure-u-md-2-5">
                                 <form class="pure-form pure-form-stacked">
