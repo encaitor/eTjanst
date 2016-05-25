@@ -73,7 +73,7 @@
     }
     $lang_other = mysqli_real_escape_string($mysqli, $_POST['otherLanguages']);
 
-    $publishAd = ("INSERT INTO ads (title, msg, game, skill, skill_newbie, skill_casual, skill_semipro, skill_hardcore, timezone, s_time, e_time, region, lang_eng, lang_chi, lang_spa, lang_ara, lang_other, username) VALUES('$title', '$msg', '$game', '$playtype', '$lfNewbie', '$lfCasual', '$lfSemipro', '$lfHardcore', '$timezone', '$s_time', '$e_time', '$region', '$lang_eng', '$lang_chi', '$lang_spa', '$lang_ara', '$lang_other', '$user')");
+    $publishAd = ("INSERT INTO ads (title, username, msg, game, skill, skill_newbie, skill_casual, skill_semipro, skill_hardcore, timezone, s_time, e_time, region, lang_eng, lang_chi, lang_spa, lang_ara, lang_other) VALUES('$title', '$user', '$msg', '$game', '$playtype', '$lfNewbie', '$lfCasual', '$lfSemipro', '$lfHardcore', '$timezone', '$s_time', '$e_time', '$region', '$lang_eng', '$lang_chi', '$lang_spa', '$lang_ara', '$lang_other')");
     $mysqli->query($publishAd);
     
     header('Location: ')
