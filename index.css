@@ -5,9 +5,23 @@
 }
 
 
-/*
-* --Base style --
-*/
+h1{ 
+    color: #7f8c8d;
+    text-align: center;
+    font-size: 13px;
+}
+
+h2{
+
+    position: center;
+    font-size: 2em;
+    color: #7f8c8d;
+}
+
+p{
+
+    font-size: 13px;
+}
 
 body {
     line-height: 1.7em;
@@ -15,84 +29,83 @@ body {
     font-size: 13px;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-label {
-    color: #34495e;
+#spacer{
+
+    height: 5em;
 }
 
-.pure-img-responsive {
-    max-width: 100%;
-    height: auto;
-}
+#menuLink1{
 
-/*
-* -- LAYOUT STYLES --
-*/
-.l-box {
-    padding: 1em;
-}
-
-.l-box-lrg {
-    padding: 2em;
-    border-bottom: 1px solid rgba(0,0,0,0.1);
-}
-
-.is-center {
-    text-align: center;
-}
-
-/*
-* -- PURE BUTTON STYLES --
-*/
-.pure-button {
-    background-color: #1f8dd6;
-    color: white;
-    padding: 0.5em 2em;
-    border-radius: 5px;
-}
-
-a.pure-button-primary {
-    background: white;
-    color: #1f8dd6;
-    border-radius: 5px;
+    width: 50%;
+    color: #7f8c8d;
+    background: black;
     font-size: 120%;
+
+
 }
 
+#searchDown{
 
-
-/*
-* -- Form Styles --
-*/
-
-.pure-form label {
-    color:white;
-}
-
-.pure-form {
-    margin-left: 2.2em;
-}
-
-
-/*
-* -- MENU STYLES -- 
-*/
-
-.home-menu {
-    background: #2d3e50;
-    padding: 0.5em;
+    max-height: 5em;
     text-align: center;
-    box-shadow: 0 5px 5px rgba(0,0,0, 0.10);
 }
 
-.pure-menu-list {
-    margin-top: 1em;
+.feed{
+    padding-left: 6em;
+    position: center;
+    background: black;
 }
 
+.sidebar {
+    text-align: center;
+    background: #fff;
+    padding-top: 3em;
+    background-color: black;
+    color: #7f8c8d;
+
+
+}
+
+.post{
+
+    text-align: left;
+    position: center;
+}
+
+.create{
+
+    color: #7f8c8d;
+    font-size: 140%;
+}
+
+
+.foot{
+
+    background: #2d3e50;
+}
+
+.footer{
+    text-align:center;
+    word-spacing: 6em;
+    font-size: 22px;
+    background: #111;
+}
+
+.pure-menu-link{
+
+    background: #2d3e50;
+}
+
+.pure-menu-links li a{
+
+    color: #2d3e50;
+    text-decoration: none;
+}
+
+.pure-menu-list ul{
+
+    background: black;
+}
 
 .pure-menu.pure-menu-fixed {
     
@@ -101,14 +114,21 @@ a.pure-button-primary {
 }
 
 
-.home-menu .pure-menu-heading {
-    color:white;
-    font-weight: 400;
-    font-size: 120%;
+
+.menu-horizontal {
+    text-align: left;
 }
 
-.home-menu .pure-menu-selected a {
-    color:white;
+.home-menu {
+    background: #2d3e50;
+    padding: 0.5em;
+    text-align: center;
+    box-shadow: 0 5px 5px rgba(0,0,0, 0.10);
+}
+    
+.home-menu ul {
+    float: right;
+    padding-right: 2em;
 }
 
 .home-menu a {
@@ -122,115 +142,78 @@ a.pure-button-primary {
     color: #AECFE5;
 }
 
+.post-description{
 
+    width: 90%;
+    min-height: 5em;
+    margin-bottom: 5px;
+    position: center;
+    background-color: white;
+    border-color: white;
+    padding: 2em;
+    padding-top: 1em;
+    border: #2d3e50 solid;
+    border-radius: 10px;
+    margin-top: 30px;
+    margin-bottom: 15px;
 
+    color: black;
 
-/*
- * -- SPLASH STYLES --
- * This is the css for the start splash, which content rolls over.
- */
-
-
-.splash-container {
-    background-image: url(../assets/img/dragon-sky-frontpage.jpg);
-    background-position: 10% 30%;
-    z-index: 1;
-    overflow: hidden;
-    /* The following styles are required for the "scroll-over" effect */
-    width: 100%;
-    height: 88%;
-    top: 0;
-    left: 0;
-    position: fixed !important;
+  
 }
 
-.splash {
-    /*   Container for splash text. absolute center .splash within .splash-container */
-    width: 80%;
-    height: 50%;
-    margin: auto;
-    position: absolute;
-    top: 100px; left: 0; bottom: 0; right: 0;
-    text-align: center;
-    text-transform: uppercase;
-}
-
-/* This is css of the splash text */
-.splash-head {
-    font-size: 40px;
+.rubrik{
     font-weight: bold;
-    color: white;
-    border:none;
-    padding: 1em 1.6em;
-    font-weight: 100;
-    border-radius: 5px;
-    line-height: 1em;
-}
-
-/*
- * -- CONTENT STYLES --
- * This represents the content area (everything below splash)
- */
-.content-wrapper {
-    /* These styles are required for the "scroll-over" effect */
-    position: absolute;
-    top: 87%;
-    width: 100%;
-    min-height: 12%;
-    z-index: 2;
-    background: #2d3e50;
 
 }
 
-.content{
-    background: #2d3e50;
+.pure-menu-children ul{
+
+    color: #2d3e50;
 }
 
-/* Main content headers (<h2>) */
-.content-head {
-    color: #F8F8FF;
-    font-weight: 400;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    margin: 2em 0 1em;
+.post-header{
+
+    position: center;
 }
 
-
-/* This is the class used for the content sub-headers (<h3>) */
-.content-subhead {
-    color: #F8F8FF;
-}
-    .content-subhead i {
-        margin-right: 7px;
-    }
-
-/* This is the class used for the dark-background areas. */
-.ribbon {
-    background: #1F2B38
-;
-    color: #aaa;
+a {
+    color: #1e7ad3;
+    text-decoration: none;
 }
 
-/* This is the class used for the footer
-*   --not yet in use-- 
-*/
-.footer {
-    background: #111;
+a:hover { text-decoration: none; }
+
+.container, .main {
+    width: 640px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 300px;
 }
 
+.main { margin-top: 50px }
 
-/* responsiveness for larger devices, adjust the size of layout. */
+.lt-ie9 .search input { line-height: 26px }
+
+
+.pure-menu-links{
+
+    background: black;
+    font-size: 18px;
+}
+
 
 @media (min-width: 48em){
     body {
-        font-size: 16px;
+        font-size: 15px;
+
+    }
+
+    p{
+        font-size: 25px;
     }
     
-    .content{
-        padding:1em;
-    }
     
-    /* float menu header to the right, and items to the left. */
     .home-menu{
         text-align: left;
     }
@@ -240,161 +223,4 @@ a.pure-button-primary {
     }
     
     
-    .splash {
-        width: 50%;
-        height: 50%;
-    }
-    
-    .splash-head {
-        font-size: 250%;
-    }
-    
-    .l-box-lrg {
-        border: none;
-    }
-    
-    @media (min-width: 78em) {
-    /* We increase the header font size even more */
-    .splash-head {
-        font-size: 300%;
-    }
-}
-    
-    
-}
-
-/*
-* --- POP-UP CSS ---
-*/
-
-
-
-.modalDialog{
-    position:           fixed;
-    top:                0;
-    right:              0;
-    bottom:             0; 
-    left:               0;
-    background:         rgba(0, 0, 0, 0.5);
-    z-index:            99999;
-    opacity:            0;
-    -webkit-transition: opacity 400ms ease-in;
-    -moz-transition:    opacity 400ms ease-in;
-    transition:         opacity 400ms ease-in;
-    pointer-events:     none;
-}
-
-.modalDialog:target {
-    opacity:            1;
-    pointer-events:     auto;
-}
-
-.modalDialog > div {
-    width: 400px;
-    position: relative;
-    margin: 10% auto;
-    padding: 5px 20px 13px 20px;
-    background:#F4F4F2;
-    
-}
-
-.popupHeader {
-    background:#F4F4F2;
-    position:relative;
-    padding:10px 20px;
-    border-bottom:1px solid #DDD;
-    font-weight:bold;
-}
-
-.popupHeader .modalClose {
-    position: absolute; 
-    right: 0; 
-    top:0;
-    padding:10px 15px;
-     
-    cursor: pointer; 
-    color:#aaa; 
-    font-size:16px;
-    text-decoration: none;
-}
-
-.user_login input[type="text"], 
-.user_login input[type="email"], 
-.user_login input[type="password"] {
-    display: block;
-    width:90%; 
-    padding: 10px; 
-    border:1px solid #DDD; 
-    color:#666;
-}
-
-
-.user_login label {
-    display: block; 
-    margin-bottom:5px;
-}   
-
-.user_login input[type="checkbox"] {
-    float:left; 
-    margin-right:5px;
-}
-
-.user_login input[type="checkbox"]+label {
-    margin-right: 1em;
-    float:left;
-}
-
-.user_login .checkbox {
-    margin-bottom: 10px; 
-    clear: both; 
-    overflow: hidden;   
-}
-.forgot_password {
-    display:block;
-    margin: 20px 0 10px; 
-    clear: both; 
-    overflow: hidden; 
-    text-decoration: none;
-    color:#ED6347;
-}
-
-.btn {
-    padding:10px 20px; 
-    background: #F4F4F2;
-    
-}
-.btn_red {
-    background: #ED6347; 
-    color: #FFF;
-}
-
-.btn:hover {
-    background: #E4E4E2;
-}
-.btn_red:hover {
-    background: #C12B05;
-}
-
-a.btn {
-    color:#666; text-align: center; text-decoration: none;
-}
-a.btn_red {
-    color: #FFF;
-}
-
-.centeredText {
-    text-align: center;
-    margin: 20px 0; 
-    clear: both; 
-    overflow: hidden; 
-    text-transform: uppercase;
-}
-
-.action_btns {
-    margin-right: 1em;
-    clear:both;
-    overflow: hidden;
-}
-.action_btns a {
-    display: block;
 }
