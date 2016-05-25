@@ -53,13 +53,25 @@
                         }
 
                         $retrieveAds = "SELECT * FROM ads ORDER BY adID DESC";
-                        $results = $mysqli->query($retrieveAds);
-                        if($results == false) {
+                        $ads = $mysqli->query($retrieveAds);
+                        if($ads == false) {
                             die("Query failed: ".mysqli_error().PHP_EOL.$retrieveAds);
                         }
+                        
+                        
 
-                        while($row = mysqli_fetch_array($results))
+                        while($row = mysqli_fetch_array($ads))
                         {
+                            if ($row['skill'] == 'semipro') {
+                                $skillevel = 'Semi-pro';
+                            } elseif ($row['skill'] == 'hardcore') {
+                                $skillevel = 'Hardcore';
+                            } elseif ($row['skill'] == 'casual') {
+                                $skillevel = 'Casual';
+                            } else {
+                                $skillevel = 'Newbie';
+                            }
+                            
                             echo "<div class='post-description'>";
                             echo "<div class='rubrik' id='tid'>";
                             echo "<p class='feedTitle'>" . $row['title'] . "</p>";
@@ -68,7 +80,7 @@
                             echo "</div>";
                             echo "<hr>";
                             echo "<p class='feed'>" . $row['msg'] . "</p>";
-                            echo "<p class='feed'>" . $row['skill'] . "</p>";
+                            echo "<p class='feed'>My current skillevel: " . $skillevel . "</p>";
                             echo "</div>";
                         }
                         $mysqli->close();
