@@ -1,4 +1,5 @@
 <?php
+    session_start();
 
     $mysqli = new mysqli('localhost', 'root', '', 'db-projekt');
 	
@@ -14,6 +15,7 @@
 
 /* --- IMAGE QUERY --- */
 
+    $username = $_SESSION['user'];
     $fileName = $_FILES['userfile']['name'];
     $tmpName  = $_FILES['userfile']['tmp_name'];
     $fileSize = $_FILES['userfile']['size'];
@@ -36,16 +38,23 @@
         echo "Sorry, your file is too large.";
         $uploadOk = 0;
     }
-
-
-
-
-
-   
-
-    $uploadUserImg = "INSERT INTO `user_images` (filename, type, size, content) VALUES ('$fileName', '$fileType', '$fileSize', '$content')";
-    $mysqli->query($uploadUserImg);
-	
     
+    $sqlHasImage = "SELECT * FROM user_images WHERE username = '$username'";
+    $hasImage = $mysqli->query($sqlHasImage);
+    $userRows = mysqli_num_rows($hasImage);
+
+
+    if($userRows == 0)
+    {    
+    $uploadUserImg = "INSERT INTO `user_images` (filename, type, size, content, username) VALUES ('$fileName', '$fileType', '$fileSize', '$content','$username')";
+    $mysqli->query($uploadUserImg);
+    }
+    else{
+        $updateUserImg = "UPDATE user_images SET filename='$fileName', type='$fileType', size='$fileSize', content='$content', username='$username' WHERE username = '$username'";
+        
+        $mysqli->query($updateUserImg);
+    }
+
+    header('location: account.php');
 
 exit;
