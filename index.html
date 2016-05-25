@@ -110,25 +110,25 @@
                 <h2 class="content-subhead is-center">Join the fun!</h2>
                 
                     <a name="register"></a> 
-                    <form name="registerForm" class="pure-form pure-form-stacked" method="POST">
+                    <form name="registerForm" class="pure-form pure-form-stacked" method="POST" action="signUp.php" >
                         
                         <fieldset> 
                             <div id="formBox" class="pure-g">    
                                 
                                 <div class="pure-u-1-2 ">
                                     <label for="nameInput"> What should we call you?</label>
-                                    <input id="nameInput" type="text" placeholder="Your callsign" required>
+                                    <input id="nameInput" type="text" name="registerUsername" placeholder="Your callsign" required>
 
                                     <label for="email"> Email </label>
-                                    <input id="emailInput" type="text" placeholder="Email" required>
+                                    <input id="emailInput" type="text" name="registerEmail" placeholder="Email" required>
                                 </div>
                                 
                                 <div class="pure-u-1-2 ">
                                     <label for="passwordInput"> Password</label>
-                                    <input id="passwordInput" type="password" placeholder="Enter Password" required>
+                                    <input id="passwordInput" type="password"  name="registerPassword" placeholder="Enter Password" required>
 
                                     <label>Re-enter Password</label>
-                                    <input id="passwordReIn" type="password" placeholder="Enter Password Again" required>
+                                    <input id="passwordReIn" type="password"  name="validatePassword" placeholder="Enter Password Again" required>
                                 </div>
                                     
                                 <div id="submitBtn" class="pure-u-1 pure-md-1">
@@ -158,13 +158,13 @@
                 </header>
                 <section class="popupBody">
                     <div class="user_login">
-                        <form>
-                            <label>Username</label>
-                            <input type="text" />
+                        <form name="loginForm" method="POST" action="login.php">
+                            <label>E-mail</label>
+                            <input name="inputEmail" type="text" />
                             <br />
 
                             <label>Password</label>
-                            <input type="password" />
+                            <input name="loginPassword" type="password" />
                             <br />
 
                             <div class="checkbox">
@@ -173,7 +173,7 @@
                             </div>
 
                             <div class="action_btns">
-                                <a href="#" class="btn btn_red">Login</a>				'
+                                <input type="submit" class="btn btn_red"/>	
                                 <a href="#" class="forgot_password">Forgot password?</a>
 
                             </div>

@@ -21,7 +21,7 @@
                 <a class="pure-menu-heading" href=""><img src="assets/img/Controller-52.png"></a>
                 
                 <ul class="pure-menu-list">
-                    <li class="pure-menu-item" ><a href="start.html" class="pure-menu-link">Home</a></li>
+                    <li class="pure-menu-item" ><a href="index.html" class="pure-menu-link">Home</a></li>
                 </ul>
             </div>
         </div>
@@ -69,10 +69,11 @@
                             </div>
                             
                             <div class="picture pure-u-1 pure-u-md-1-2">
-                                <form class="pure-form pure-form-stacked">
+                                <form action="uploadimage.php" enctype="multipart/form-data" class="pure-form pure-form-stacked" method="POST">
                                     <fieldset>
-                                        <label for="pictureUpload">Select Picture to Upload</label>
-                                        <input type="file" name="pictureUpload" id="pictureUpload"/>
+                                        <label for="userfile">Select Picture to Upload</label>
+                                        <input type="hidden" name="MAX_FILE_SIZE" value="2000000">
+                                        <input type="file" name="userfile" id="pictureUpload"/>
                                         
                                         <output id="uploadedPicture">
                                             <div class="picturePreview pure-u-1" id="picturePreview"></div>
