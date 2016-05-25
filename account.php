@@ -49,7 +49,7 @@
 				            ?>
                             <h2>Your user information.</h2>
                             <div class="basicInfo pure-u-1 pure-u-md-2-5">
-                                <form class="pure-form pure-form-stacked">
+                                <form class="pure-form pure-form-stacked" method="POST" action="changePassword.php">
                                     <fieldset>
                                         <label for="name">Name</label>
                                         <input id="name" type="text" placeholder="Sebastian" class="pure-input-1" readonly>
@@ -58,10 +58,10 @@
                                         <input id="email" type="email" placeholder="Email" class="pure-input-1" readonly>
 
                                         <label for="password">Password</label>
-                                        <input id="password" type="password" placeholder="New Password" class="pure-input-1">
+                                        <input id="newPassword" type="password" name="newPassword" placeholder="New Password" class="pure-input-1">
+                                        <input id="verifyPassword" type="password" name="verifyPassword" placeholder="Verify Password" class="pure-input-1">
                                         <label for="verifypassword">Enter your old password to confirm changes.</label>
-                                        <input id="confirmPassword" type="password" placeholder="Password" class="pure-input-1">
-                                        <input id="verifyPassword" type="password" placeholder="Verify Password" class="pure-input-1">
+                                        <input id="oldPassword" type="password" name="oldPassword" placeholder="Password" class="pure-input-1">
                                     </fieldset>
                                     <p><button class="pure-button">Save new password</button></p>
                                 </form>
@@ -84,47 +84,47 @@
                             </div>
                             
                             <div class="generalInfo pure-u-1">
-                                <form class="pure-form pure-form-stacked">
+                                <form name="bioForm" class="pure-form pure-form-stacked" method="POST" action="saveAccountInfo.php">
                                     <fieldset>
                                         <label for="bio">Bio</label>
-                                        <textarea id="bio" placeholder="Please write something about yourself here!" class="pure-input-2-3"></textarea>
+                                        <textarea id="bio" name="bio" placeholder="Please write something about yourself here!" class="pure-input-2-3"></textarea>
 
                                         <br>
                                         <label for="time">Usual gamingtimes</label>
                                         <div class="pure-u-1 pure-u-md-1-5">
                                             <label for="weekends" class="pure-checkbox">
-                                                <input id="weekends" type="checkbox" value="">
+                                                <input id="weekends" name="weekends" type="checkbox" value="">
                                                 Weekends
                                             </label>
                                         </div>
                                         <div class="pure-u-1 pure-u-md-1-5">
-                                            <label for="weekdays" class="pure-checkbox">
-                                                <input id="weekdays" type="checkbox" value="">
+                                            <label for="weekdays"  class="pure-checkbox">
+                                                <input id="weekdays"  name="weekdays" type="checkbox" value="">
                                                 Weekdays
                                             </label>
                                         </div>
                                         <br>
                                         <div class="pure-u-1 pure-u-md-1-5">
                                             <label for="morning" class="pure-checkbox">
-                                                <input id="morning" type="checkbox" value="">
+                                                <input id="morning" name="morning" type="checkbox" value="">
                                                 Morning
                                             </label>
                                         </div>
                                         <div class="pure-u-1 pure-u-md-1-5">
                                             <label for="afternoon" class="pure-checkbox">
-                                                <input id="afternoon" type="checkbox" value="">
+                                                <input id="afternoon" name="afternoon" type="checkbox" value="">
                                                 Afternoon
                                             </label>
                                         </div>
                                         <div class="pure-u-1 pure-u-md-1-5">
                                             <label for="evenings" class="pure-checkbox">
-                                                <input id="evenings" type="checkbox" value="">
+                                                <input id="evenings" name="evenings" type="checkbox" value="">
                                                 Evenings
                                             </label>
                                         </div>
                                         <div class="pure-u-1 pure-u-md-1-5">
                                             <label for="nights" class="pure-checkbox">
-                                                <input id="nights" type="checkbox" value="">
+                                                <input id="nights" name="nights" type="checkbox" value="">
                                                 Nights
                                             </label>
                                         </div>
