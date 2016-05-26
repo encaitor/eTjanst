@@ -61,11 +61,12 @@ body {
 }
 
 .sidebar {
-    text-align: center;
+   text-align: center;
     background: #fff;
     padding-top: 3em;
-    background-color: darkred;
+    background-color: black;
     color: #7f8c8d;
+    border-left: 2px solid white;
 
 
 }
@@ -207,7 +208,7 @@ a {
     text-decoration: none;
 }
 
-a:hover { text-decoration: none; }
+a:hover { color: #a0aaab; }
 
 .container, .main {
     width: 640px;
@@ -226,7 +227,12 @@ a:hover { text-decoration: none; }
     background: black;
     font-size: 18px;
 }
+.myform{
 
+padding-left: 5em;
+text-align: left;
+font-size: 15px;
+}
 
 @media (min-width: 48em){
     body {
