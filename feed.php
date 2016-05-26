@@ -20,9 +20,12 @@
             <div class="home-menu pure-menu pure-menu-horizontal pure-menu-fixed">
                 
                 <ul class="pure-menu-list">
-
-                    <li class="pure-menu-item" ><a href="profilePage.php" class="pure-menu-link">My Profile</a> "Användarnamn"</li>
-               
+                    <li class="pure-menu-item" ><a href="index.html" class="pure-menu-link">Home</a></li>
+                    <li class="pure-menu-item"><a href="gamesPage.html" class="pure-menu-link">Ads</a></li>
+                    <li class="pure-menu-item"><a href="adForm.php" class="pure-menu-link">Create Ad</a></li>
+                    <li class="pure-menu-item"><a href="profilePage.html" class="pure-menu-link">My Profile</a></li>
+                    <li class="pure-menu-item"><a id="" href="logout.php" class="pure-menu-link ">Log Out</a></li>
+                    
                 </ul>
             
             </div>
@@ -91,7 +94,10 @@
 		</div>
 				
         <div class="sidebar pure-u-1 pure-u-sm-1-4">
-
+            <?php
+            session_start();
+            echo "<p class='loggedIn'>Logged in as " . $_SESSION['user'] . "</p>";
+            ?>
             <a href="adForm.php" class="create">Create ad</a>
             <br>
             <br>
@@ -99,9 +105,10 @@
 	   <br>
        <br>
        <!--Search box-->
-     <form>
-  <input type="text" name="search">
-</form>
+     <form id="searchform"  action="search.php" method="post" >
+        <input type="text" name="game" placeholder="Search for games..">
+        <input type="submit" name="submit" value="Search">
+     </form>
 
         <?php print("output"); ?>
 
@@ -151,7 +158,7 @@
 
         </div>
     </div>
-                    <div class="footer">
+    <div class="footer">
                 
                 <div class="foot pure-menu pure-menu-horizontal pure-u-1-2">
 
@@ -162,6 +169,7 @@
                     </ul>
 
                 </div>
+        </div>
 	</body>
 
 </html>
