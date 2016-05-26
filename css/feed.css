@@ -160,6 +160,11 @@ body {
     color: black;
 }
 
+p.loggedIn {
+    font-size: 16px;
+    color: yellow;
+}
+
 p.feed {
     padding-left: 0em;
     font-size: 14px;
