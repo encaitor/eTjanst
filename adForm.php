@@ -57,15 +57,13 @@
                                 <label for="message">Message</label>
                                 <textarea id="message" class="pure-input-1" name="message" placeholder="Message"></textarea>
                                 <br>
-                                <label for="game-option-one" class="pure-checkbox"> Games </label>
-                                    <input id="game-option-one" type="radio" name="optionsGames" value="dota">
-                                    DOTA 2
-                                    <input id="game-option-two" type="radio" name="optionsGames" value="csgo">
-                                    CS-GO
-                                    <input id="game-option-three" type="radio" name="optionsGames" value="lol">
-                                    League of Legends
-                                    <input id="game-option-four" type="radio" name="optionsGames" value="tf2">
-                                    Team Fortress 2
+                                <label for="game">Game</label>
+                                <select id="game" name="game">
+                                    <option>DOTA 2</option>
+                                    <option>League ff Legends</option>
+                                    <option>Team Fortress 2</option>
+                                    <option>CS-GO</option>
+                                </select>
                                 <label for="my-play-type-option-one" class="pure-radio"> My play type </label>
                                     <input id="my-play-type-option-one" type="radio" name="optionsPlaytype" value="newbie">
                                     Newbie
@@ -216,7 +214,12 @@
         </div>
         
         <div class="footer l-box is-center">
-            ***** Här kan vi ha lite allmäna länkar till t.ex användaravtal. *****
+            <div class="pure-menu pure-menu-horizontal">
+            <a href="FAQ.html" class="pure-menu-heading pure-menu-link">FAQ</a>
+            <ul class="pure-menu-list">
+                <li class="pure-menu-item"><a href="contactUs.html" class="pure-menu-link">CONTACT US</a></li>
+            </ul>
+            </div>
         </div>
         
         
