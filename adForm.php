@@ -96,12 +96,9 @@
                                     <input id="play-time-option-four" type="checkbox" name="" value="">
                                     Nights
                                 <br>
-                                
-                                <br>
                                 <label for="region">Region</label>
                                 <select id="region" name="region">
                                     <option value="North America">North America</option>
-                                    <option value="Central America">Central America</option>
                                     <option value="South America">South America</option>
                                     <option value="Europe">Europe</option>
                                     <option value="Africa">Africa</option>
