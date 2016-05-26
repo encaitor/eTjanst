@@ -82,101 +82,21 @@
                                     Semi-pro
                                     <input id="other-play-type-option-four" type="checkbox" name="LF_Hardcore" value="">
                                     Hardcore
+                                <label for="play-time-option-one" class="pure-checkbox"> I usually play </label>
+                                    <input id="play-time-option-one" type="checkbox" name="" value="">
+                                    Weekends
+                                    <input id="play-time-option-two" type="checkbox" name="" value="">
+                                    Weekdays
+                                    <input id="play-time-option-three" type="checkbox" name="" value="">
+                                    Morning
+                                    <input id="play-time-option-four" type="checkbox" name="" value="">
+                                    Afternoon
+                                    <input id="play-time-option-four" type="checkbox" name="" value="">
+                                    Evening
+                                    <input id="play-time-option-four" type="checkbox" name="" value="">
+                                    Nights
                                 <br>
-                                <label for="timezone">Timezone</label>
-                                <select id="timezone" name="timezone">
-                                    <option>GMT-12</option>
-                                    <option>GMT-11</option>
-                                    <option>GMT-10</option>
-                                    <option>GMT-9</option>
-                                    <option>GMT-8</option>
-                                    <option>GMT-7</option>
-                                    <option>GMT-6</option>
-                                    <option>GMT-5</option>
-                                    <option>GMT-4</option>
-                                    <option>GMT-3</option>
-                                    <option>GMT-2</option>
-                                    <option>GMT-1</option>
-                                    <option>GMT</option>
-                                    <option>GMT+1</option>
-                                    <option>GMT+2</option>
-                                    <option>GMT+3</option>
-                                    <option>GMT+4</option>
-                                    <option>GMT+5</option>
-                                    <option>GMT+6</option>
-                                    <option>GMT+7</option>
-                                    <option>GMT+8</option>
-                                    <option>GMT+9</option>
-                                    <option>GMT+10</option>
-                                    <option>GMT+11</option>
-                                    <option>GMT+12</option>
-                                </select>
-                                <label for="startHour">Start Time</label>
-                                <select id="startHour" name="startHour">
-                                    <option>00</option>
-                                    <option>01</option>
-                                    <option>02</option>
-                                    <option>03</option>
-                                    <option>04</option>
-                                    <option>05</option>
-                                    <option>06</option>
-                                    <option>07</option>
-                                    <option>08</option>
-                                    <option>09</option>
-                                    <option>10</option>
-                                    <option>11</option>
-                                    <option>12</option>
-                                    <option>13</option>
-                                    <option>14</option>
-                                    <option>15</option>
-                                    <option>16</option>
-                                    <option>17</option>
-                                    <option>18</option>
-                                    <option>19</option>
-                                    <option>20</option>
-                                    <option>21</option>
-                                    <option>22</option>
-                                    <option>23</option>
-                                </select>
-                                <select id="startMin" name=startMin>
-                                    <option>00</option>
-                                    <option>15</option>
-                                    <option>30</option>
-                                    <option>45</option>
-                                </select>
-                                <label for="endHour">End Time</label>
-                                <select id="endHour" name="endHour">
-                                    <option>00</option>
-                                    <option>01</option>
-                                    <option>02</option>
-                                    <option>03</option>
-                                    <option>04</option>
-                                    <option>05</option>
-                                    <option>06</option>
-                                    <option>07</option>
-                                    <option>08</option>
-                                    <option>09</option>
-                                    <option>10</option>
-                                    <option>11</option>
-                                    <option>12</option>
-                                    <option>13</option>
-                                    <option>14</option>
-                                    <option>15</option>
-                                    <option>16</option>
-                                    <option>17</option>
-                                    <option>18</option>
-                                    <option>19</option>
-                                    <option>20</option>
-                                    <option>21</option>
-                                    <option>22</option>
-                                    <option>23</option>
-                                </select>
-                                <select id="endMin" name="endMin">
-                                    <option>00</option>
-                                    <option>15</option>
-                                    <option>30</option>
-                                    <option>45</option>
-                                </select><br>
+                                
                                 <br>
                                 <label for="region">Region</label>
                                 <select id="region" name="region">
