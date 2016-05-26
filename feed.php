@@ -16,7 +16,6 @@
          <title>start</title>
 
     <header>
-    
             <div class="home-menu pure-menu pure-menu-horizontal pure-menu-fixed">
                 
                 <ul class="pure-menu-list">
@@ -25,13 +24,8 @@
                     <li class="pure-menu-item"><a href="adForm.php" class="pure-menu-link">Create Ad</a></li>
                     <li class="pure-menu-item"><a href="profilePage.html" class="pure-menu-link">My Profile</a></li>
                     <li class="pure-menu-item"><a id="" href="logout.php" class="pure-menu-link ">Log Out</a></li>
-                    
                 </ul>
-            
             </div>
-
-        <div id="spacer"></div>
-
     </header>
 
     <body>
@@ -55,8 +49,7 @@
                     </header>
                         
                 </section>
-		</div>
-				
+		</div>		
         <div class="sidebar pure-u-1 pure-u-sm-1-4">
             
             <?php
@@ -66,9 +59,6 @@
             <a href="adForm.php" class="create">Create ad</a>
             <br>
             <br>
-
-	   <br>
-       <br>
        <!--Search box-->
      <form id="searchform"  action="search.php" method="post" >
         <input type="text" name="game" placeholder="Search for games..">
@@ -83,24 +73,25 @@
         <div class="pure-menu pure-menu-horizontal" id="SearchDown">
             <ul class="pure-menu-list">
                 <form id="filter" name="filter" action="" method="post">
-                    <input type="checkbox" name="skill_Newbie" value="newbie">Newbie<br>
+                    <label>Skillevel</label>
+                    <p class="skillevel"><input type="checkbox" name="skill_Newbie" value="newbie">Newbie
                     <input type="checkbox" name="skill_Casual" value="casual" >Casual<br>
-                    <input type="checkbox" name="skill_Semipro" value="semipro">Semi-pro<br>
-                    <input type="checkbox" name="skill_Hardcore" value="hardcore">Hardcore<br>
+                    <input type="checkbox" name="skill_Semipro" value="semipro">Semi-pro
+                    <input type="checkbox" name="skill_Hardcore" value="hardcore">Hardcore<br></p>
+                    
+                    <label>Region</label>
+                    <p class="region"><input type="checkbox" name="northamerica" value="northamerica">North America
+                    <input type="checkbox" name="centralamerica" value="centralamerica">Central America<br>
+                    <input type="checkbox" name="southamerica" value="southamerica">South America
+                    <input type="checkbox" name="europe" value="europe">Europe<br>
+                    <input type="checkbox" name="africa" value="africa">Africa
+                    <input type="checkbox" name="asia" value="asia">Asia<br>
+                    <input type="checkbox" name="oceania" value="oceania">Oceania</p>
+                    <br>
 
                     <input type="submit" value="Submit">
                 </form>
-                <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
-                    <a href="#" id="menuLink1" class="pure-menu-link">Play type</a>
-                    
-                    <ul class="pure-menu-children" name="skill">
-                        <li class="pure-menu-item"><a href="#" name="skill_Newbie" class="pure-menu-links" value="newbie">Newbie</a></li>
-                        <li class="pure-menu-item"><a href="#" name="skill_Casual" class="pure-menu-links" value="casual">Casual</a></li>
-                        <li class="pure-menu-item"><a href="#" skill_Semipro class="pure-menu-links" value="semipro">Semi-pro</a></li>
-                        <li class="pure-menu-item"><a href="#" skill_Semipro class="pure-menu-links" value="hardcore">Hardcore</a></li>
-                    </ul>
-
-                </li>
+                
             </ul>
         </div>
 
@@ -108,26 +99,7 @@
         <br>
         <br>
 
-        <!--Region-->
-
-        <div class="pure-menu pure-menu-horizontal">
-            <ul class="pure-menu-list">
-                <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
-                    <a href="#" id="menuLink1" class="pure-menu-link">Region</a>
-
-                    <ul class="pure-menu-children">
-                        <li class="pure-menu-item"><a href="#" class="pure-menu-links">North America</a></li>
-                        <li class="pure-menu-item"><a href="#" class="pure-menu-links">Central America</a></li>
-                        <li class="pure-menu-item"><a href="#" class="pure-menu-links">South America</a></li>
-                        <li class="pure-menu-item"><a href="#" class="pure-menu-links">Europe</a></li>
-                        <li class="pure-menu-item"><a href="#" class="pure-menu-links">Africa</a></li>
-                        <li class="pure-menu-item"><a href="#" class="pure-menu-links">Asia</a></li>
-                        <li class="pure-menu-item"><a href="#" class="pure-menu-links">Oceania</a></li>
-                    </ul>
-
-                </li>
-            </ul>
-         </div>
+       
 
         </div>
     </div>
