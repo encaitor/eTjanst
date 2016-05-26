@@ -124,8 +124,14 @@
         </div>
     </div>
     
-        <div class="footer l-box is-center">
-            ***** Här kan vi ha lite allmäna länkar till t.ex användaravtal. *****
+        <div class="footer l-box">
+            <div class="pure-menu pure-menu-horizontal">
+            
+            <ul class="pure-menu-list">
+                 <li class="pure-menu-item"><a href="FAQ.html" class="pure-menu-link">FAQ</a></li>
+                <li class="pure-menu-item"><a href="contactUs.html" class="pure-menu-link">CONTACT US</a></li>
+            </ul>
+            </div>
         </div>
         
 	</body>
