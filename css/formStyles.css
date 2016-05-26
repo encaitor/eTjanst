@@ -30,6 +30,9 @@ body {
 .side-box{
     padding: 1em;
 }
+.pictureBox {
+    float: right;
+}
 
 .info-box{
     padding: 5em;
