@@ -73,19 +73,18 @@
         <div class="pure-menu pure-menu-horizontal" id="SearchDown">
             <ul class="pure-menu-list">
                 <form id="filter" name="filter" action="" method="post">
-                    <label>Skillevel</label>
+                    <label class="filterLabel">Skillevel</label>
                     <p class="skillevel"><input type="checkbox" name="skill_Newbie" value="newbie">Newbie
                     <input type="checkbox" name="skill_Casual" value="casual" >Casual<br>
                     <input type="checkbox" name="skill_Semipro" value="semipro">Semi-pro
                     <input type="checkbox" name="skill_Hardcore" value="hardcore">Hardcore<br></p>
                     
-                    <label>Region</label>
+                    <label class="filterLabel">Region</label>
                     <p class="region"><input type="checkbox" name="northamerica" value="northamerica">North America
-                    <input type="checkbox" name="centralamerica" value="centralamerica">Central America<br>
-                    <input type="checkbox" name="southamerica" value="southamerica">South America
-                    <input type="checkbox" name="europe" value="europe">Europe<br>
-                    <input type="checkbox" name="africa" value="africa">Africa
-                    <input type="checkbox" name="asia" value="asia">Asia<br>
+                    <input type="checkbox" name="southamerica" value="southamerica">South America<br>
+                    <input type="checkbox" name="europe" value="europe">Europe
+                    <input type="checkbox" name="africa" value="africa">Africa<br>
+                    <input type="checkbox" name="asia" value="asia">Asia
                     <input type="checkbox" name="oceania" value="oceania">Oceania</p>
                     <br>
 
@@ -170,10 +169,11 @@ function filterSearch() {
         die("Error: ($code) $error");
     }
     
-    $filterSearch = "SELECT * FROM ads ORDER BY adID DESC";
+    $filterSearch = "SELECT adID FROM ads ORDER BY adID DESC";
 
-    $skill = '';
+    //FILTER - SKILLEVEL
     
+    $skill = '';
     if (isset($_POST['skill_Newbie'])) {
         $skill .= "'" . $_POST['skill_Newbie'] . "', ";
     }
@@ -186,15 +186,55 @@ function filterSearch() {
     if (isset($_POST['skill_Hardcore'])) {
         $skill .= "'" . $_POST['skill_Hardcore'] . "', ";
     }
-    $trimSkill = substr($skill, 0, -2);                 
+    $trimSkill = substr($skill, 0, -2);
+    
+    
+    //FILTER - REGION
+    /*$region = '';
+    if (isset($_POST['northamerica'])) {
+        $region .= "'" . $_POST['northamerica'] . "', ";
+    }
+    if (isset($_POST['southamerica'])) {
+        $region .= "'" . $_POST['southamerica'] . "', ";
+    }
+    if (isset($_POST['europe'])) {
+        $region .= "'" . $_POST['europe'] . "', ";
+    }
+    if (isset($_POST['africa'])) {
+        $region .= "'" . $_POST['africa'] . "', ";
+    }
+    if (isset($_POST['asia'])) {
+        $region .= "'" . $_POST['asia'] . "', ";
+    }
+    if (isset($_POST['oceania'])) {
+        $region .= "'" . $_POST['oceania'] . "', ";
+    }
+    $trimRegion = substr($region, 0, -2);*/
+    
 
     if (isset($_POST['skill_Newbie']) || isset($_POST['skill_Casual']) || isset($_POST['skill_Semipro']) || isset($_POST['skill_Hardcore'])) {
-        $filterSearch = "SELECT * FROM ads WHERE skill in ($trimSkill) ORDER BY adID DESC";
+        $filterSkill = "SELECT adID, skill FROM ads WHERE skill in ($trimSkill) ORDER BY adID DESC";
     } else {
-        $filterSearch = "SELECT * FROM ads ORDER BY adID DESC";
+        $filterSkill = "SELECT adID FROM ads ORDER BY adID DESC";
     }
-    return $filterSearch;
     
+    /*if (isset($_POST['northamerica']) || isset($_POST['southamerica']) || isset($_POST['europe']) || isset($_POST['africa']) || isset($_POST['asia']) || isset($_POST['oceania'])) {
+        $filterRegion = "SELECT adID, region FROM ads WHERE region in ($trimRegion) ORDER BY adID DESC";
+    } else {
+        $filterRegion = "SELECT adID FROM ads ORDER BY adID DESC";
+    }
+    
+    $join = "SELECT $filterSkill.adID, $filterSkill.skill, $filterRegion.region FROM $filterSkill INNER JOIN $filterRegion ON $filterSkill.adID=$filterRegion.adID";
+    
+    $filterSearch = $mysqli->query($join);*/
+    
+    $titleTextUsername = "SELECT adID, username, title, msg FROM ads ORDER BY adID";
+    $rest = $mysqli->query($titleTextUsername);
+    
+    $filterJoin = "SELECT $filterSkill.adID, $filterSkill.skill, $rest.adID, $rest.username, $rest.title, $rest.msg FROM $rest INNER JOIN $filterSkill ON $rest.adID=$filterSkill.adID";
+    $filterSearch = $mysqli->query($filterJoin);
+    
+    return $filterSearch;
     $mysqli->close();
 }   
 ?>
