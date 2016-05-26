@@ -58,36 +58,32 @@
                                     <div class="pictureBox">
                                         
                                          <?php
-      //KOD FÖR HÄMTNING AV BILDER. 
+                                /* --- KOD FÖR HÄMTNING AV BILDER. --- */ 
+                                
         
-         function displayImage(){
-                
-                $username = $_SESSION['user'];
-                
-                $mysqli = new mysqli('localhost', 'root', '', 'db-projekt');
-                $imgRequest = "2";
-                $sql =  "SELECT * FROM user_images WHERE username = '$username'";
-                $sth =  $mysqli->query($sql);
-                
-                $result = mysqli_fetch_array($sth);
-                
-                echo '<img height="300" width="250" src="data:image/jpeg;base64,'.base64_encode( $result['content'] ).'"/>';
-                
-            }
-            displayImage();
-        
-        ?>
+                                 function displayImage(){
 
+                                        $username = $_SESSION['user'];
 
+                                        $mysqli = new mysqli('localhost', 'root', '', 'db-projekt');
+                                        $imgRequest = "2";
+                                        $sql =  "SELECT * FROM user_images WHERE username = '$username'";
+                                        $sth =  $mysqli->query($sql);
 
+                                        $result = mysqli_fetch_array($sth);
+
+                                        echo '<img height="300" width="250" src="data:image/jpeg;base64,'.base64_encode( $result['content'] ).'"/>';
+
+                                    }
+                                    displayImage();
+
+                                ?>
                                     </div>
                                     
                                     <label for="bio">Bio</label>
-                                    <textarea id="bio" class="pure-input-2-3" readonly>
-                                    <?php
+                                    <textarea id="bio" class="pure-input-2-3" readonly><?php
                                         getUserBio($username);
-                                    ?>
-                                    </textarea>
+                                        ?></textarea>
                                     
                                     <br>
                                     <label for="time">Usual gamingtimes:</label>
@@ -145,19 +141,10 @@
                                     
                                     </table>
                                     
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
                                     <br>
                                     <a class="pure-button" href="account.php">Edit profile</a>
                                 </fieldset>
                             </form>
-                            
                             
                         </div>
                     </div>
@@ -174,7 +161,6 @@
         
     </body>
 </html>
-
 
 <?php
                                    
@@ -205,8 +191,6 @@ function getUserPlaytimes($username,$time){
     $result = mysqli_fetch_array($sth);
     
     return $result[$time];
-    
-    
     
 }
 ?>

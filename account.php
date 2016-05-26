@@ -91,14 +91,10 @@
                                 <form name="bioForm" class="pure-form pure-form-stacked" method="POST" action="saveAccountInfo.php">
                                     <fieldset>
                                         <label for="bio">Bio</label>
-                                        <textarea id="bio" name="bio" placeholder="Please write something about yourself here!" class="pure-input-2-3">
-                                        
-                                        <?php
+                                        <textarea id="bio" name="bio" placeholder="Please write something about yourself here!" class="pure-input-2-3"><?php
                                             $username = $_SESSION['user'];
                                             getUserBio($username);
-                                        ?>
-                                        
-                                        </textarea>
+                                        ?></textarea>
 
                                         <br>
                                         <label for="time">Usual gamingtimes</label>
