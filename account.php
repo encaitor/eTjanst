@@ -12,7 +12,7 @@
 
         <link rel="stylesheet" href="css/formStyles.css">
 
-        <title>Profile</title>
+        <title>Game ads</title>
     </head>    
         
     <body>
@@ -31,7 +31,7 @@
         </div>
         
         <div clas="banner">
-            <h1 class="banner-head"> Profile</h1>
+            <h1 class="banner-head"> Games Library</h1>
         </div>
         
         
@@ -147,12 +147,7 @@
         </div>
         
         <div class="footer l-box is-center">
-            <div class="pure-menu pure-menu-horizontal">
-            <a href="FAQ.html" class="pure-menu-heading pure-menu-link">FAQ</a>
-            <ul class="pure-menu-list">
-                <li class="pure-menu-item"><a href="contactUs.html" class="pure-menu-link">CONTACT US</a></li>
-            </ul>
-            </div>
+            ***** Här kan vi ha lite allmäna länkar till t.ex användaravtal. *****
         </div>
         <script src="assets/js/uploadPicture.js"></script>
     </body>

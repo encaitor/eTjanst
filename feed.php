@@ -46,58 +46,23 @@
                 <section class="post">
 
                     <header class="post-header">
-                    <?php
-                        $mysqli = new mysqli('localhost', 'root', '', 'db-projekt');
-
-                        $error = $mysqli->connect_error;
-                        if ($error) {
-                            $code  = $mysqli->connect_errno;
-                            die("Error: ($code) $error");
-                        }
-
-                        $retrieveAds = "SELECT * FROM ads ORDER BY adID DESC";
-                        $ads = $mysqli->query($retrieveAds);
-                        if($ads == false) {
-                            die("Query failed: ".mysqli_error().PHP_EOL.$retrieveAds);
-                        }
-                        
-                        
-
-                        while($row = mysqli_fetch_array($ads))
-                        {
-                            if ($row['skill'] == 'semipro') {
-                                $skillevel = 'Semi-pro';
-                            } elseif ($row['skill'] == 'hardcore') {
-                                $skillevel = 'Hardcore';
-                            } elseif ($row['skill'] == 'casual') {
-                                $skillevel = 'Casual';
-                            } else {
-                                $skillevel = 'Newbie';
-                            }
-                            
-                            echo "<div class='post-description'>";
-                            echo "<div class='rubrik' id='tid'>";
-                            echo "<p class='feedTitle'>" . $row['title'] . "</p>";
-                            echo "<p class='feedUser'>Posted by: " . $row['username'] . "</p>";
-                            echo "<div style='clear: both;'></div>";
-                            echo "</div>";
-                            echo "<hr>";
-                            echo "<p class='feed'>" . $row['msg'] . "</p>";
-                            echo "<p class='feed'>My current skillevel: " . $skillevel . "</p>";
-                            echo "</div>";
-                        }
-                        $mysqli->close();
+                    
+                        <?php
+                        showPosts();
                     ?>
+                        
                     </header>
                         
                 </section>
 		</div>
 				
         <div class="sidebar pure-u-1 pure-u-sm-1-4">
+            
             <?php
             session_start();
             echo "<p class='loggedIn'>Logged in as " . $_SESSION['user'] . "</p>";
             ?>
+            
             <a href="adForm.php" class="create">Create ad</a>
             <br>
             <br>
@@ -158,18 +123,65 @@
 
         </div>
     </div>
-    <div class="footer">
-                
-                <div class="foot pure-menu pure-menu-horizontal pure-u-1-2">
-
-                    <ul>
-                        <li class="pure-menu-item"><a href="#" class="pure-menu-link">FAQ</a></li>
-                        <li class="pure-menu-item"><a href="#" class="pure-menu-link"> TEST</a></li>
-                        <li class="pure-menu-item"><a href="#" class="pure-menu-link"> TEST</a></li>
-                    </ul>
-
-                </div>
+    
+        <div class="footer l-box is-center">
+            ***** Här kan vi ha lite allmäna länkar till t.ex användaravtal. *****
         </div>
+        
 	</body>
 
 </html>
+
+
+<?php
+
+function showPosts() {
+    
+    $mysqli = new mysqli('localhost', 'root', '', 'db-projekt');
+
+                        $error = $mysqli->connect_error;
+                        if ($error) {
+                            $code  = $mysqli->connect_errno;
+                            die("Error: ($code) $error");
+                        }
+
+                        $retrieveAds = "SELECT * FROM ads ORDER BY adID DESC";
+                        $ads = $mysqli->query($retrieveAds);
+                        if($ads == false) {
+                            die("Query failed: ".mysqli_error().PHP_EOL.$retrieveAds);
+                        }
+                        
+                        
+
+                        while($row = mysqli_fetch_array($ads))
+                        {
+                            if ($row['skill'] == 'semipro') {
+                                $skillevel = 'Semi-pro';
+                            } elseif ($row['skill'] == 'hardcore') {
+                                $skillevel = 'Hardcore';
+                            } elseif ($row['skill'] == 'casual') {
+                                $skillevel = 'Casual';
+                            } else {
+                                $skillevel = 'Newbie';
+                            }
+                            
+                            echo "<div class='post-description'>";
+                            echo "<div class='rubrik' id='tid'>";
+                            echo "<p class='feedTitle'>" . $row['title'] . "</p>";
+                            echo "<p class='feedUser'>Posted by: " . $row['username'] . "</p>";
+                            echo "<div style='clear: both;'></div>";
+                            echo "</div>";
+                            echo "<hr>";
+                            echo "<p class='feed'>" . $row['msg'] . "</p>";
+                            echo "<p class='feed'>My current skillevel: " . $skillevel . "</p>";
+                            echo "</div>";
+                        }
+                        $mysqli->close();
+}
+
+
+
+
+?>
+
+
