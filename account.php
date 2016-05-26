@@ -22,9 +22,9 @@
                 
                 <ul class="pure-menu-list">
                     <li class="pure-menu-item" ><a href="index.html" class="pure-menu-link">Home</a></li>
-                    <li class="pure-menu-item"><a href="feed.php" class="pure-menu-link">Ads</a></li>
+                    <li class="pure-menu-item"><a href="gamesPage.html" class="pure-menu-link">Ads</a></li>
                     <li class="pure-menu-item"><a href="adForm.php" class="pure-menu-link">Create Ad</a></li>
-                    <li class="pure-menu-item"><a href="profilePage.html" class="pure-menu-link">My Profile</a></li>
+                    <li class="pure-menu-item"><a href="profilePage.php" class="pure-menu-link">My Profile</a></li>
                     <li class="pure-menu-item"><a id="" href="logout.php" class="pure-menu-link ">Log Out</a></li>
                 </ul>
             </div>
@@ -91,44 +91,113 @@
                                 <form name="bioForm" class="pure-form pure-form-stacked" method="POST" action="saveAccountInfo.php">
                                     <fieldset>
                                         <label for="bio">Bio</label>
-                                        <textarea id="bio" name="bio" placeholder="Please write something about yourself here!" class="pure-input-2-3"></textarea>
+                                        <textarea id="bio" name="bio" placeholder="Please write something about yourself here!" class="pure-input-2-3">
+                                        
+                                        <?php
+                                            $username = $_SESSION['user'];
+                                            getUserBio($username);
+                                        ?>
+                                        
+                                        </textarea>
 
                                         <br>
                                         <label for="time">Usual gamingtimes</label>
                                         <div class="pure-u-1 pure-u-md-1-5">
                                             <label for="weekends" class="pure-checkbox">
-                                                <input id="weekends" name="weekends" type="checkbox" value="">
+                                                <input id="weekends" name="weekends" type="checkbox" 
+                                                value="" 
+                                                       <?php
+                                                       
+                                                       $weekend = "weekends";
+                                                       if(getUserPlaytimes($username,$weekend) === 'yes')
+                                                       {
+                                                       echo 'checked';
+                                                       }
+
+                                                       ?>
+                                                       
+                                                       >
                                                 Weekends
                                             </label>
                                         </div>
                                         <div class="pure-u-1 pure-u-md-1-5">
                                             <label for="weekdays"  class="pure-checkbox">
-                                                <input id="weekdays"  name="weekdays" type="checkbox" value="">
+                                                <input id="weekdays"  name="weekdays" type="checkbox" value=""
+                                                       <?php
+                                                       
+                                                       $weekday = "weekdays";
+                                                       if(getUserPlaytimes($username,$weekday) === 'yes')
+                                                       {
+                                                       echo 'checked';
+                                                       }
+                                                       ?>
+                                                       
+                                                       >
                                                 Weekdays
                                             </label>
                                         </div>
                                         <br>
                                         <div class="pure-u-1 pure-u-md-1-5">
                                             <label for="morning" class="pure-checkbox">
-                                                <input id="morning" name="morning" type="checkbox" value="">
+                                                <input id="morning" name="morning" type="checkbox" value="" 
+                                                       
+                                                       <?php
+                                                       
+                                                       $morning = "morning";
+                                                       if(getUserPlaytimes($username,$morning) === 'yes')
+                                                       {
+                                                       echo 'checked';
+                                                       }
+
+                                                       ?>
+                                                       >
                                                 Morning
                                             </label>
                                         </div>
                                         <div class="pure-u-1 pure-u-md-1-5">
                                             <label for="afternoon" class="pure-checkbox">
-                                                <input id="afternoon" name="afternoon" type="checkbox" value="">
+                                                <input id="afternoon" name="afternoon" type="checkbox" value=""
+                                                       
+                                                       <?php
+                                                       
+                                                       $afternoon = "afternoon";
+                                                       if(getUserPlaytimes($username,$afternoon) === 'yes')
+                                                       {
+                                                       echo 'checked';
+                                                       }
+                                                       ?>
+                                                       
+                                                       >
                                                 Afternoon
                                             </label>
                                         </div>
                                         <div class="pure-u-1 pure-u-md-1-5">
                                             <label for="evenings" class="pure-checkbox">
-                                                <input id="evenings" name="evenings" type="checkbox" value="">
+                                                <input id="evenings" name="evenings" type="checkbox" value=""
+                                                       
+                                                       <?php
+                                                       $evenings = "evenings";
+                                                       if(getUserPlaytimes($username,$evenings) === 'yes')
+                                                       {
+                                                       echo 'checked';
+                                                       }
+                                                       ?>
+                                                       >
                                                 Evenings
                                             </label>
                                         </div>
                                         <div class="pure-u-1 pure-u-md-1-5">
                                             <label for="nights" class="pure-checkbox">
-                                                <input id="nights" name="nights" type="checkbox" value="">
+                                                <input id="nights" name="nights" type="checkbox" value=""
+                                                       
+                                                       <?php
+                                                       $nights = "nights";
+                                                       if(getUserPlaytimes($username,$nights) === 'yes')
+                                                       {
+                                                       echo 'checked';
+                                                       }
+                                                       ?>
+                                                       >
                                                 Nights
                                             </label>
                                         </div>
@@ -152,3 +221,39 @@
         <script src="assets/js/uploadPicture.js"></script>
     </body>
 </html>
+
+<?php
+                                   
+function getUserBio($username){
+    
+    
+    $mysqli = new mysqli('localhost', 'root', '', 'db-projekt');
+                                    
+    $sql =  "SELECT bio FROM bio WHERE username = '$username'";
+    $sth =  $mysqli->query($sql);
+    $result = mysqli_fetch_array($sth);
+    
+        if(mysqli_num_rows($sth) == 0)
+        {
+            echo 'This is a user without a story...';
+        }
+        else
+        {
+            echo $result['bio'];
+        }
+    }
+
+function getUserPlaytimes($username,$time){
+    
+    $mysqli = new mysqli('localhost', 'root', '', 'db-projekt');
+    
+    $sql = "SELECT $time FROM bio WHERE username = '$username'";
+    $sth = $mysqli->query($sql);
+    $result = mysqli_fetch_array($sth);
+    
+    return $result[$time];
+}
+?>
+
+
+
