@@ -81,20 +81,16 @@ body {
 
 .foot{
 
-    background: #2d3e50;
+    background: #111;
 }
 
 .footer{
     text-align:center;
-    word-spacing: 6em;
-    font-size: 22px;
+    font-size: 13px;
     background: #111;
 }
 
-.pure-menu-link{
 
-    background: #2d3e50;
-}
 
 .pure-menu-links li a{
 
