@@ -8,6 +8,7 @@
 * --Base style --
 */
 
+
 body {
     line-height: 1.7em;
     color: #7f8c8d;
@@ -19,7 +20,9 @@ body {
     background: #111;
 }
 
-
+.header {
+        font-size: 16px;
+    }
 /*
 * -- LAYOUT STYLES --
 */
@@ -137,6 +140,7 @@ body {
     letter-spacing: 0.1em;
     margin: 2em 0 1em;
 }
+
 
 @media (min-width:48em){
     
