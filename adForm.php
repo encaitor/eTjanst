@@ -59,14 +59,14 @@
                                 <br>
                                 <label for="game">Game</label>
                                 <select id="game" name="game">
-                                    <option>DOTA 2</option>
-                                    <option>League of Legends</option>
-                                    <option>Team Fortress 2</option>
-                                    <option>CS-GO</option>
-                                    <option>World of Warcraft</option>
-                                    <option>Diablo 3</option>
-                                    <option>Minecraft</option>
-                                    <option>Starcraft 2</option>
+                                    <option name="dota2">DOTA 2</option>
+                                    <option name="lol">League of Legends</option>
+                                    <option name="teamfortress2">Team Fortress 2</option>
+                                    <option name="csgo">CS-GO</option>
+                                    <option name="wow">World of Warcraft</option>
+                                    <option name="diablo3">Diablo 3</option>
+                                    <option name="minecraft">Minecraft</option>
+                                    <option name="overwatch">Overwatch</option>
                                 </select>
                                 <label for="my-play-type-option-one" class="pure-radio"> My play type </label>
                                     <input id="my-play-type-option-one" type="radio" name="optionsPlaytype" value="newbie">
