@@ -11,6 +11,7 @@
 	$userEmail = mysqli_real_escape_string($mysqli, $_POST['registerEmail']);
 	$userPW = mysqli_real_escape_string($mysqli, $_POST['registerPassword']);
     $validatePW = mysqli_real_escape_string($mysqli, $_POST['validatePassword']);
+    $permission = '0';
 
     if ($userPW == $validatePW){
         $size = mcrypt_get_iv_size(MCRYPT_CAST_256, MCRYPT_MODE_CFB);
@@ -27,7 +28,7 @@
         $usernameRows = mysqli_num_rows($usernameCheck);
 	
 	   if ($emailRows == 0 && $usernameRows == 0){
-		  $addUserToDB = ("INSERT INTO users (username, email, password, salt) VALUES('$userName', '$userEmail', '$hash', '$salt')");
+		  $addUserToDB = ("INSERT INTO users (username, email, password, salt, permission) VALUES('$userName', '$userEmail', '$hash', '$salt', '$permission')");
 		  $mysqli->query($addUserToDB);
 	
 		  header('Location: index.html');
