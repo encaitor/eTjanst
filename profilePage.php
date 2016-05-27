@@ -28,8 +28,8 @@
                 <a class="pure-menu-heading" href=""><img src="assets/img/Controller-52.png"></a>
                 
                 <ul class="pure-menu-list">
-                    <li class="pure-menu-item" ><a href="index.html" class="pure-menu-link">Home</a></li>
-                    <li class="pure-menu-item"><a href="gamesPage.html" class="pure-menu-link">Ads</a></li>
+                    <li class="pure-menu-item" ><a href="index.php" class="pure-menu-link">Home</a></li>
+                    <li class="pure-menu-item"><a href="feed.php" class="pure-menu-link">Ads</a></li>
                     <li class="pure-menu-item"><a href="adForm.php" class="pure-menu-link">Create Ad</a></li>
                     <li class="pure-menu-item"><a href="profilePage.php" class="pure-menu-link">My Profile</a></li>
                     <li class="pure-menu-item"><a id="" href="logout.php" class="pure-menu-link ">Log Out</a></li>
@@ -156,7 +156,12 @@
         </div>
         
         <div class="footer l-box is-center">
-            ***** Här kan vi ha lite allmäna länkar till t.ex användaravtal. *****
+            <div class="pure-menu pure-menu-horizontal">
+            <a href="FAQ.html" class="pure-menu-heading pure-menu-link">FAQ</a>
+            <ul class="pure-menu-list">
+                <li class="pure-menu-item"><a href="contactUs.html" class="pure-menu-link">CONTACT US</a></li>
+            </ul>
+            </div>
         </div>
         
     </body>

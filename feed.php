@@ -13,16 +13,16 @@
 
         <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-min.css">
 
-         <title>start</title>
+         <title>Ads</title>
 
     <header>
             <div class="home-menu pure-menu pure-menu-horizontal pure-menu-fixed">
                 
                 <ul class="pure-menu-list">
-                    <li class="pure-menu-item" ><a href="index.html" class="pure-menu-link">Home</a></li>
-                    <li class="pure-menu-item"><a href="gamesPage.html" class="pure-menu-link">Ads</a></li>
+                    <li class="pure-menu-item" ><a href="index.php" class="pure-menu-link">Home</a></li>
+                    <li class="pure-menu-item"><a href="feed.php" class="pure-menu-link">Ads</a></li>
                     <li class="pure-menu-item"><a href="adForm.php" class="pure-menu-link">Create Ad</a></li>
-                    <li class="pure-menu-item"><a href="profilePage.html" class="pure-menu-link">My Profile</a></li>
+                    <li class="pure-menu-item"><a href="profilePage.php" class="pure-menu-link">My Profile</a></li>
                     <li class="pure-menu-item"><a id="" href="logout.php" class="pure-menu-link ">Log Out</a></li>
                 </ul>
             </div>
@@ -133,7 +133,13 @@
     </div>
     
         <div class="footer l-box is-center">
-            ***** Här kan vi ha lite allmäna länkar till t.ex användaravtal. *****
+            <div class="pure-menu pure-menu-horizontal">
+            
+            <ul class="pure-menu-list">
+                <li class="pure-menu-item"><a href="FAQ.html" class="pure-menu-link">FAQ</a></li>
+                <li class="pure-menu-item"><a href="contactUs.html" class="pure-menu-link">CONTACT US</a></li>
+            </ul>
+            </div>
         </div>
         
 	</body>

@@ -1,7 +1,7 @@
 <?php
 	session_start();
 	if(isset($_SESSION['user']));{
-		header("Location: index.html");
+		header("Location: feed.php");
 	}
 	$error='';
 	$mysqli = new mysqli('localhost', 'root', '', 'db-projekt');
@@ -31,9 +31,9 @@
 
 	if ($rows == 1){
 		$_SESSION['user'] = $userResult['username'];
-        header('Location: profilePage.html');
+        header('Location: profilePage.php');
 	} else {
-        header('Location: index.html');
+        header('Location: index.php#openErrorModal');
 	}
 	
 	exit;

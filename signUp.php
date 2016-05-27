@@ -32,11 +32,11 @@
 	
 		  header('Location: index.html');
 	   } else {
-		  header('Location: start.html');
+		  header('Location: index.html');
 	   }
     }
     else {
-        header('Location: start.html');
+        header('Location: index.html');
     }
 	exit;
 ?>

@@ -19,7 +19,7 @@
         <?php
             session_start();
 			if(!isset($_SESSION['user'])){
-				header("Location: index.html");
+				header("Location: index.php");
 			}
 		?>
         <div class="header">
@@ -27,7 +27,7 @@
                 <a class="pure-menu-heading" href=""><img src="assets/img/Controller-52.png"></a>
                 
                 <ul class="pure-menu-list">
-                    <li class="pure-menu-item" ><a href="index.html" class="pure-menu-link">Home</a></li>
+                    <li class="pure-menu-item" ><a href="index.php" class="pure-menu-link">Home</a></li>
                     <li class="pure-menu-item"><a href="feed.php" class="pure-menu-link">Ads</a></li>
                     <li class="pure-menu-item"><a href="adForm.php" class="pure-menu-link">Create Ad</a></li>
                     <li class="pure-menu-item"><a href="profilePage.php" class="pure-menu-link">My Profile</a></li>

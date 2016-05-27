@@ -399,3 +399,54 @@ a.btn_red {
 .action_btns a {
     display: block;
 }
+
+/*ERROR POPUP*/
+.modalErrorDialog{
+    position:           fixed;
+    top:                0;
+    right:              0;
+    bottom:             0; 
+    left:               0;
+    background:         rgba(0, 0, 0, 0.5);
+    z-index:            99999;
+    opacity:            0;
+    -webkit-transition: opacity 400ms ease-in;
+    -moz-transition:    opacity 400ms ease-in;
+    transition:         opacity 400ms ease-in;
+    pointer-events:     none;
+}
+
+.modalErrorDialog:target {
+    opacity:            1;
+    pointer-events:     auto;
+}
+
+.modalErrorDialog > div {
+    width: 400px;
+    position: relative;
+    margin: 10% auto;
+    padding: 5px 20px 13px 20px;
+    background:#F4F4F2;
+    
+}
+
+.errorPopupHeader {
+    background:#F4F4F2;
+    position:relative;
+    padding:10px 20px;
+    border-bottom:1px solid #DDD;
+    font-weight:bold;
+    color: red;
+}
+
+.errorPopupHeader .modalClose {
+    position: absolute; 
+    right: 0; 
+    top:0;
+    padding:10px 15px;
+     
+    cursor: pointer; 
+    color:#aaa; 
+    font-size:16px;
+    text-decoration: none;
+}
