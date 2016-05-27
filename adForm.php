@@ -30,7 +30,7 @@
                     <li class="pure-menu-item" ><a href="index.html" class="pure-menu-link">Home</a></li>
                     <li class="pure-menu-item"><a href="feed.php" class="pure-menu-link">Ads</a></li>
                     <li class="pure-menu-item"><a href="adForm.php" class="pure-menu-link">Create Ad</a></li>
-                    <li class="pure-menu-item"><a href="profilePage.html" class="pure-menu-link">My Profile</a></li>
+                    <li class="pure-menu-item"><a href="profilePage.php" class="pure-menu-link">My Profile</a></li>
                     <li class="pure-menu-item"><a id="" href="logout.php" class="pure-menu-link ">Log Out</a></li>
                 </ul>
             </div>
@@ -60,9 +60,13 @@
                                 <label for="game">Game</label>
                                 <select id="game" name="game">
                                     <option>DOTA 2</option>
-                                    <option>League ff Legends</option>
+                                    <option>League of Legends</option>
                                     <option>Team Fortress 2</option>
                                     <option>CS-GO</option>
+                                    <option>World of Warcraft</option>
+                                    <option>Diablo 3</option>
+                                    <option>Minecraft</option>
+                                    <option>Starcraft 2</option>
                                 </select>
                                 <label for="my-play-type-option-one" class="pure-radio"> My play type </label>
                                     <input id="my-play-type-option-one" type="radio" name="optionsPlaytype" value="newbie">
