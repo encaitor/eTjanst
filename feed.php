@@ -31,7 +31,7 @@
 	 <div class="pure-g">
 	   <div class="feed pure-u-1 pure-u-sm-3-4">
 		<!--Feed-->	
-            <h2>Ads</h2>
+            <h2>Feed</h2>
                 <section class="post">
                     <header class="post-header">
                         <?php
