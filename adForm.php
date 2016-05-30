@@ -63,7 +63,7 @@
                                     <option value="teamfortress2">Team Fortress 2</option>
                                     <option value="csgo">CS-GO</option>
                                     <option value="wow">World of Warcraft</option>
-                                    <option value="diablo3">Diablo 3</option>
+                                    <option value="Diablo 3">Diablo 3</option>
                                     <option value="minecraft">Minecraft</option>
                                     <option value="overwatch" >Overwatch</option>
                                 </select>
