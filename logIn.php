@@ -1,6 +1,7 @@
 <?php
 	session_start();
 	if(isset($_SESSION['user']));{
+        setcookie('loggedin', true, time()+3600);
 		header("Location: feed.php");
 	}
 	$error='';
@@ -33,6 +34,7 @@
 		$_SESSION['user'] = $userResult['username'];
         $_SESSION['email'] = $userResult['email'];
         $_SESSION['admin'] = $userResult['permission'];
+        $_SESSION['valid_until'] = time() + 1800; // stay logged in for 30min
         header('Location: profilePage.php');
 	} else {
         header('Location: index.php#openErrorModal');
