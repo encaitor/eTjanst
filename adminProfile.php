@@ -165,7 +165,7 @@
                                 </thead>
                                 <tbody>
                                     <?php
-                                    include 'showUserAds.php';
+                                    include 'functions/showUserAds.php';
                                     printUserPosts($username);  
                                     ?> 
                                 </tbody>    
