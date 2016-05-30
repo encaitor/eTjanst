@@ -165,7 +165,7 @@ function showPosts() {
         echo "<td style ='padding: 5px'> Looking for Semi-pro: " .$row['skill_semipro'] . "</td>"; 
         echo "</tr>";
         echo "<tr>";
-        echo "<td style ='padding: 5px'> Looking for Hardcore " .$row['skill_hardcore'] . "</td>"; 
+        echo "<td style ='padding: 5px'> Looking for Hardcore: " .$row['skill_hardcore'] . "</td>"; 
         echo "<td style ='padding: 5px' class ='other'colspan='2'> Other: " .$row['lang_other'] . "</td>"; 
         echo "</tr>";
         echo "<tr>";
