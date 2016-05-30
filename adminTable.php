@@ -111,7 +111,7 @@
 <?php
 function showPosts() {
     
-    $mysqli = new mysqli('localhost', 'root', 'root', 'db-projekt');
+    $mysqli = new mysqli('localhost', 'root', '', 'db-projekt');
     $error = $mysqli->connect_error;
     if ($error) {
         $code  = $mysqli->connect_errno;
@@ -176,7 +176,7 @@ function showPosts() {
     $mysqli->close();
 }
 function filterSearch() {
-    $mysqli = new mysqli('localhost', 'root', 'root', 'db-projekt');
+    $mysqli = new mysqli('localhost', 'root', '', 'db-projekt');
     $error = $mysqli->connect_error;
     if ($error) {
         $code  = $mysqli->connect_errno;
