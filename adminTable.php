@@ -1,6 +1,3 @@
-
-
-
 <html>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -112,11 +109,9 @@
 
 
 <?php
-
 function showPosts() {
     
-    $mysqli = new mysqli('localhost', 'root', '', 'db-projekt');
-
+    $mysqli = new mysqli('localhost', 'root', 'root', 'db-projekt');
     $error = $mysqli->connect_error;
     if ($error) {
         $code  = $mysqli->connect_errno;
@@ -131,7 +126,6 @@ function showPosts() {
     }
                         
                         
-
     while($row = mysqli_fetch_array($ads))
     {
         if ($row['skill'] == 'semipro') {
@@ -149,7 +143,6 @@ function showPosts() {
         echo "<a id='modal_trigger' href='#openModal' class='delete' title='Delete'class='pure-menu-item'>Delete</a>";
         echo "<div style='clear: both;'></div>";
         echo "</div>";
-
         echo "<table class='admin'border='5' cellspacing='8' >";
         echo "<tr>";
         echo "<td style ='padding: 5px'> Username: " . $row['username']  . "</td>";
@@ -162,29 +155,28 @@ function showPosts() {
         echo "<td style ='padding: 5px'> English: " .$row['lang_eng'] . "</td>"; 
         echo "</tr>";
         echo "<tr>";
-
         echo "<td style ='padding: 5px'> Spanish: " .$row['lang_spa'] . "</td>";
         echo "<td style ='padding: 5px'> Arabic: " .$row['lang_ara'] . "</td>"; 
-        echo "<td style ='padding: 5px'> Chinese: " .$row['lang_chi'] . "</td>"; 
+        echo "<td style ='padding: 5px'> Mandarin: " .$row['lang_chi'] . "</td>"; 
         echo "</tr>";
         echo "<tr>";
-        
-        echo "<td style ='padding: 5px' class ='other'colspan='3'> Other: " .$row['lang_other'] . "</td>"; 
+        echo "<td style ='padding: 5px'> Looking for Newbie: " .$row['skill_newbie'] . "</td>";
+        echo "<td style ='padding: 5px'> Looking for Casual: " .$row['skill_casual'] . "</td>"; 
+        echo "<td style ='padding: 5px'> Looking for Semi-pro: " .$row['skill_semipro'] . "</td>"; 
+        echo "</tr>";
+        echo "<tr>";
+        echo "<td style ='padding: 5px'> Looking for Hardcore " .$row['skill_hardcore'] . "</td>"; 
+        echo "<td style ='padding: 5px' class ='other'colspan='2'> Other: " .$row['lang_other'] . "</td>"; 
         echo "</tr>";
         echo "<tr>";
         echo "<td style ='padding: 5px' class='msg' colspan='3'> Message: " . $row['msg'] . "</td>";
         echo "</table>";
-
-
-
         echo "</div>";
     }
     $mysqli->close();
 }
-
 function filterSearch() {
-    $mysqli = new mysqli('localhost', 'root', '', 'db-projekt');
-
+    $mysqli = new mysqli('localhost', 'root', 'root', 'db-projekt');
     $error = $mysqli->connect_error;
     if ($error) {
         $code  = $mysqli->connect_errno;
@@ -200,7 +192,6 @@ function filterSearch() {
     
     if ($gameSearch == null || $gameSearch == "") {
         //FILTER - GAMES
-
         $games = '';
         if (isset($_POST['dota2'])) {
             $games .= "'" . $_POST['dota2'] . "', ";
@@ -227,14 +218,11 @@ function filterSearch() {
             $games .= "'" . $_POST['minecraft'] . "', ";
         }
         $trimGames = substr($games, 0, -2);
-
         if (isset($_POST['dota2']) || isset($_POST['csgo']) || isset($_POST['lol']) || isset($_POST['wow']) || isset($_POST['hearthstone']) || isset($_POST['diablo3']) || isset($_POST['minecraft']) || isset($_POST['overwatch'])) {
             $filterGames = "SELECT * FROM ads WHERE game in ($trimGames) ORDER BY adID DESC";
         } else {
             $filterGames = "SELECT * FROM ads ORDER BY adID DESC";
         }
-
-
         $filterSearch = $mysqli->query($filterGames);
     } else {
         $query_searchGame = "SELECT * FROM ads WHERE game='$gameSearch' ORDER BY adID DESC";
@@ -243,6 +231,4 @@ function filterSearch() {
     return $filterSearch;
     $mysqli->close();
 }   
-
 ?>
-
