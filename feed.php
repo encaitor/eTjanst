@@ -70,7 +70,7 @@
                     <input type="checkbox" name="lol" value="lol"> League of Legends<br>
                     <input type="checkbox" name="wow" value="wow"> World of Warcraft<br>
                     <input type="checkbox" name="hearthstone" value="hearthstone"> Hearthstone<br>
-                    <input type="checkbox" name="diablo3" value="diablo3"> Diablo 3<br>
+                    <input type="checkbox" name="diablo_3" value="diablo_3"> Diablo 3<br>
                     <input type="checkbox" name="minecraft" value="minecraft"> Minecraft<br>
                     <input type="checkbox" name="overwatch" value="overwatch"> Overwatch<br>
                     <input type="submit" name="submit" value="Filter">
@@ -171,7 +171,7 @@ function showPosts() {
         if ($row['game'] === 'tf2'){
             $gameImg = 'assets/img/tf2logo.jpg';
         }
-        if ($row['game'] === 'Diablo 3'){
+        if ($row['game'] === 'diablo_3'){
             $gameImg = 'assets/img/diablo3logo.png';
         }
         if ($row['game'] === 'wow'){
@@ -285,8 +285,8 @@ function filterSearch() {
         if (isset($_POST['hearthstone'])) {
             $games .= "'" . $_POST['hearthstone'] . "', ";
         }
-        if (isset($_POST['diablo3'])) {
-            $games .= "'" . $_POST['diablo3'] . "', ";
+        if (isset($_POST['diablo_3'])) {
+            $games .= "'" . $_POST['diablo_3'] . "', ";
         }
         if (isset($_POST['overwatch'])) {
             $games .= "'" . $_POST['overwatch'] . "', ";
@@ -296,7 +296,7 @@ function filterSearch() {
         }
         $trimGames = substr($games, 0, -2);
 
-        if (isset($_POST['dota2']) || isset($_POST['csgo']) || isset($_POST['lol']) || isset($_POST['wow']) || isset($_POST['hearthstone']) || isset($_POST['diablo3']) || isset($_POST['minecraft']) || isset($_POST['overwatch'])) {
+        if (isset($_POST['dota2']) || isset($_POST['csgo']) || isset($_POST['lol']) || isset($_POST['wow']) || isset($_POST['hearthstone']) || isset($_POST['diablo_3']) || isset($_POST['minecraft']) || isset($_POST['overwatch'])) {
             $filterGames = "SELECT * FROM ads WHERE game in ($trimGames) ORDER BY adID DESC";
         } else {
             $filterGames = "SELECT * FROM ads ORDER BY adID DESC";
