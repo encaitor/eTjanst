@@ -34,7 +34,7 @@
 
             <ul class="pure-menu-list">
                 <li class="pure-menu-item"><a href="index.php" class="pure-menu-link">Home</a></li>
-                <li class="pure-menu-item"><a href="gamesPage.html" class="pure-menu-link">Games</a></li>
+                <li class="pure-menu-item"><a href="feed.php" class="pure-menu-link">Ads</a></li>
                 <li class="pure-menu-item"><a href="#register" class="pure-menu-link">Register</a></li>
                 <li class="pure-menu-item"><a id="modal_trigger" href="#openModal" class="pure-menu-link ">Log In</a></li>
             </ul>
@@ -148,7 +148,7 @@
         
         <div class="footer l-box is-center">
             <div class="pure-menu pure-menu-horizontal">
-            <a href="FAQ.html" class="pure-menu-heading pure-menu-link">FAQ</a>
+            <a href="FAQ.php" class="pure-menu-heading pure-menu-link">FAQ</a>
             <ul class="pure-menu-list">
                 <li class="pure-menu-item"><a href="contactUs.html" class="pure-menu-link">CONTACT US</a></li>
             </ul>
@@ -209,8 +209,13 @@
                             <input name="loginPassword" type="password" />
                             <br />
 
+                            <div class="checkbox">
+                                <input id="remember" type="checkbox" />
+                                <label for="remember">Remember me on this computer</label>
+                            </div>
+
                             <div class="action_btns">
-                                <input type="submit" value="Log In" class="btn btn_blue"/>	
+                                <input type="submit" class="btn btn_red"/>	
                                 <a href="#" class="forgot_password">Forgot password?</a>
                             </div>
                             </form>

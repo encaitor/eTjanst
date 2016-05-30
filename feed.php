@@ -25,9 +25,17 @@
                 <ul class="pure-menu-list">
                     <li class="pure-menu-item" ><a href="index.php" class="pure-menu-link">Home</a></li>
                     <li class="pure-menu-item"><a href="feed.php" class="pure-menu-link">Ads</a></li>
-                    <li class="pure-menu-item"><a href="adForm.php" class="pure-menu-link">Create Ad</a></li>
-                    <li class="pure-menu-item"><a href="profilePage.php" class="pure-menu-link">My Profile</a></li>
-                    <li class="pure-menu-item"><a id="" href="logout.php" class="pure-menu-link ">Log Out</a></li>
+                    <?php
+                    session_start();
+                    if(isset($_SESSION['user'])) {
+                        echo "<li class='pure-menu-item'><a href='adForm.php' class='pure-menu-link'>Create Ad</a></li>";
+                        echo "<li class='pure-menu-item'><a href='profilePage.php' class='pure-menu-link'>My Profile</a></li>";
+                        echo "<li class='pure-menu-item'><a id='' href='logout.php' class='pure-menu-link'>Log Out</a></li>";
+                    } else {
+                        echo "<li class='pure-menu-item'><a href='index.php#register' class='pure-menu-link'>Register</a></li>";
+                        echo "<li class='pure-menu-item'><a id='modal_trigger' href='index.php#openModal' class='pure-menu-link'>Log In</a></li>";
+                    }
+                    ?>
                 </ul>
             </div>
         </div>
@@ -39,7 +47,6 @@
                     <section class="post">
                         <header class="post-header">
                             <?php
-                            session_start();  
                             showPosts();
                             ?>
                         </header>
@@ -49,10 +56,11 @@
                 <br>
                 <br>
                 <?php
-                echo "<p class='loggedIn'>Logged in as " . $_SESSION['user'] . "</p>";
+                if(isset($_SESSION['user'])) {
+                        echo "<p class='loggedIn'>Logged in as " . $_SESSION['user'] . "</p>";
+                        echo "<a href='adForm.php' class='create'>Create ad</a>";
+                    } 
                 ?>
-
-                <a href="adForm.php" class="create">Create ad</a>
                 <br>
                 <br>
                 <!--Search box-->
@@ -81,7 +89,7 @@
         <div class="pure-u-3-4">
             <div class="footer l-box is-center">
                 <div class="pure-menu pure-menu-horizontal">
-                <a href="FAQ.html" class="pure-menu-heading pure-menu-link">FAQ</a>
+                <a href="FAQ.php" class="pure-menu-heading pure-menu-link">FAQ</a>
                 <ul class="pure-menu-list">
                 <li class="pure-menu-item"><a href="contactUs.html" class="pure-menu-link">CONTACT US</a></li>
                 </ul>
@@ -219,11 +227,15 @@ function showPosts() {
         echo "<hr>";
         echo "<div class='messageBox pure-u-1 pure-u-lg-2-3'><p class='feed'>" . $row['msg'] . "</p>";
         echo "<p class='feed'>My current skillevel: " . $skillevel . "</p>";
-        echo "<div id='postBtn' class='action_btn'><form class='pure-form' action=''>
-        <input class='btn' type='Submit' value='Contact'/></form>
-        <form action='' class='pure-form'>
-        <input class='btn btn_red' type='Submit'value='Report Ad'/>
-        </form></div>";
+        echo "<div id='postBtn' class='action_btn'>";
+        if(isset($_SESSION['user'])){
+            echo "<form class='pure-form' action='mailto:" . $email['email'] . "'>
+            <input class='btn' type='Submit' value='Contact this player'/></form>";
+        }
+        echo "<form action='mailto:admin@gamersportal.com' class='pure-form'>
+            <input class='btn btn_red' type='Submit'value='Report Ad'/>
+            </form></div>";
+        
         echo "</div>";
         echo "<div class='postInfotable pure-u-1 pure-u-lg-1-3'> 
             <table class='pure-table'> 
