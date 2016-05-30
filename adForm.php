@@ -135,7 +135,7 @@
         
         <div class="footer l-box is-center">
             <div class="pure-menu pure-menu-horizontal">
-            <a href="FAQ.html" class="pure-menu-heading pure-menu-link">FAQ</a>
+            <a href="FAQ.php" class="pure-menu-heading pure-menu-link">FAQ</a>
             <ul class="pure-menu-list">
                 <li class="pure-menu-item"><a href="contactUs.html" class="pure-menu-link">CONTACT US</a></li>
             </ul>
