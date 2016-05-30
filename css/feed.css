@@ -1,0 +1,334 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+}
+
+h1{ 
+    color: #7f8c8d;
+    text-align: center;
+    font-size: 13px;
+}
+
+h2{
+
+    position: center;
+    font-size: 2em;
+    color: #7f8c8d;
+}
+
+p{
+
+    font-size: 13px;
+}
+
+body {
+    color: #7f8c8d;
+    font-size: 13px;
+}
+
+#spacer{
+    background-color: black;
+    height: 4em;
+}
+
+#menuLink1{
+
+    width: 50%;
+    color: #7f8c8d;
+    background: black;
+    font-size: 120%;
+
+
+}
+
+
+#searchDown{
+    max-height: 5em;
+    text-align: left;
+    padding-left: 2em;
+}
+
+.feed{
+    padding-top: 3em;
+    padding-left: 6em;
+    position: center;
+    background: black;
+}
+
+.sidebar {
+   text-align: center;
+    height: 100%;
+    background: #fff;
+    padding-top: 3em;
+    background-color: #2d3e50;
+    color: #7f8c8d;
+    border-left: 2px solid white;
+    position: fixed;
+
+
+}
+
+.post{
+
+    text-align: left;
+    position: center;
+}
+
+.create{
+
+    color: #7f8c8d;
+    font-size: 140%;
+}
+
+
+.foot{
+
+    background: #2d3e50;
+}
+
+.footer{
+    text-align:center;
+    font-size: 13px;
+    background: #111;
+}
+.home-menu .pure-menu-heading {
+    color:white;
+    font-weight: 400;
+    font-size: 120%;
+}
+.pure-menu-list {
+    margin-top: 1em;
+    height: 35px;
+}
+
+.pure-menu-links li a{
+
+    color: #2d3e50;
+    text-decoration: none;
+}
+
+.pure-menu-list ul{
+
+    background: black;
+    
+}
+
+.pure-menu.pure-menu-fixed {
+    
+    border-bottom: none;
+    z-index: 4;
+}
+
+
+
+.menu-horizontal {
+    text-align: left;
+}
+
+.home-menu {
+    background: #2d3e50;
+    padding: 0.5em;
+    text-align: center;
+    box-shadow: 0 5px 5px rgba(0,0,0, 0.10);
+}
+    
+.home-menu ul {
+    float: right;
+    margin-top: 1em;
+    font-size: 16px;
+    
+}
+
+.home-menu a {
+    color: #6FBEF3;
+}
+
+.home-menu li a:hover,
+.home-menu li a:focus {
+    background: none;
+    border: none;
+    color: #AECFE5;
+}
+
+.post-description{
+
+    width: 90%;
+    min-height: 5em;
+    margin-bottom: 5px;
+    position: center;
+    background-color: white;
+    border-color: white;
+    padding: 2em;
+    padding-top: 1em;
+    border: #2d3e50 solid;
+    border-radius: 10px;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    display: inline-block;
+    color: black;
+}
+
+.postInfotable {
+    width: 25%;
+    position: relative;
+    padding-top: 1em;
+    display:inline-block;
+    margin-right: 2.5em;
+    
+}
+
+.messageBox {
+    word-break:break-all;
+}
+
+.feedGameImg{
+    border-radius: 8px;
+}
+
+
+
+p.loggedIn {
+    font-size: 16px;
+    color: yellow;
+}
+
+p.feed {
+    padding-left: 0em;
+    font-size: 14px;
+    background-color: white;
+}
+
+p.feedTitle {
+    float: left;
+    font-size: 15px;
+    margin-bottom: -5px;
+}
+
+p.feedUser {
+    float: right;
+    font-size: 15px;
+    margin-bottom: -5px;
+}
+
+.rubrik{
+    font-weight: bold;
+
+}
+
+.pure-menu-children ul{
+
+    color: #2d3e50;
+}
+
+.post-header{
+
+    position: center;
+}
+
+a {
+    color: #1e7ad3;
+    text-decoration: none;
+}
+
+a:hover { color: #a0aaab; }
+
+.container, .main {
+    width: 640px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 300px;
+}
+
+.main { margin-top: 50px }
+
+.lt-ie9 .search input { line-height: 26px }
+
+
+.pure-menu-links{
+
+    background: black;
+    font-size: 18px;
+}
+.myform{
+
+padding-left: 5em;
+text-align: left;
+font-size: 15px;
+}
+
+@media (min-width: 48em){
+    body {
+        font-size: 16px;
+
+    }
+
+    p{
+        font-size: 25px;
+    }
+    
+	  .postInfotable{
+        float: right;
+    }
+
+    
+    .home-menu{
+        text-align: left;
+    }
+    
+    .home-menu ul{
+        float: right;
+    }
+    
+    
+}
+
+#postBtn {
+    
+    display: inline-block;
+    height :40px;
+}
+
+.pure-form {
+    
+    display: inline-block;
+}
+
+.btn {
+    
+    height: 30px;
+    padding: 5px 20px; 
+    background: #F4F4F2;
+    border-radius: 5px;
+    
+}
+.btn_red {
+    
+    background: #ED6347; 
+    color: #FFF;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background: #E4E4E2;
+}
+.btn_red:hover {
+    background: #C12B05;
+}
+
+a.btn {
+    width: 50px;
+    color:#666; 
+    text-align: center; 
+    text-decoration: none;
+}
+a.btn_red {
+    color: #FFF;
+}
+a.pure-menu-heading.pure-menu-link{
+    height: 35px;
+}
