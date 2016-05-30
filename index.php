@@ -209,13 +209,8 @@
                             <input name="loginPassword" type="password" />
                             <br />
 
-                            <div class="checkbox">
-                                <input id="remember" type="checkbox" />
-                                <label for="remember">Remember me on this computer</label>
-                            </div>
-
                             <div class="action_btns">
-                                <input type="submit" class="btn btn_red"/>	
+                                <input type="submit" value="Log In" class="btn btn_blue"/>	
                                 <a href="#" class="forgot_password">Forgot password?</a>
                             </div>
                             </form>

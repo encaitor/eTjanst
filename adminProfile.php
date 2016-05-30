@@ -36,7 +36,7 @@
                 <a class="pure-menu-heading" href=""><img src="assets/img/Controller-52.png"></a>
                 
                 <ul class="pure-menu-list">
-                    <li class="pure-menu-item"><a href="adminPage.php" class="pure-menu-link">Admin</a></li>
+                    <li class="pure-menu-item"><a href="adminTable.php" class="pure-menu-link">Admin</a></li>
                     <li class="pure-menu-item"><a href="index.php" class="pure-menu-link">Home</a></li>
                     <li class="pure-menu-item"><a href="feed.php" class="pure-menu-link">Ads</a></li>
                     <li class="pure-menu-item"><a href="adForm.php" class="pure-menu-link">Create Ad</a></li>
