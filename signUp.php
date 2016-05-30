@@ -30,14 +30,14 @@
 		  $addUserToDB = ("INSERT INTO users (username, email, password, salt, permission) VALUES('$userName', '$userEmail', '$hash', '$salt', '0')");
 		  $mysqli->query($addUserToDB);
 	
-		  header('Location: index.html');
+		  header('Location: index.php');
 	   } 
 	   else {
-		  header('Location: index.html');
+		  header('Location: index.php');
 	   }
     }
     else {
-        header('Location: index.html');
+        header('Location: index.php');
     }
 	exit;
 ?>
