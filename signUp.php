@@ -7,10 +7,10 @@
 		die("Error: ($code) $error");
 	}
 	
-    $userName = mysqli_real_escape_string($mysqli, $_POST['registerUsername']);
+    	$userName = mysqli_real_escape_string($mysqli, $_POST['registerUsername']);
 	$userEmail = mysqli_real_escape_string($mysqli, $_POST['registerEmail']);
 	$userPW = mysqli_real_escape_string($mysqli, $_POST['registerPassword']);
-    $validatePW = mysqli_real_escape_string($mysqli, $_POST['validatePassword']);
+    	$validatePW = mysqli_real_escape_string($mysqli, $_POST['validatePassword']);
 
     if ($userPW == $validatePW){
         $size = mcrypt_get_iv_size(MCRYPT_CAST_256, MCRYPT_MODE_CFB);
@@ -31,7 +31,8 @@
 		  $mysqli->query($addUserToDB);
 	
 		  header('Location: index.html');
-	   } else {
+	   } 
+	   else {
 		  header('Location: index.html');
 	   }
     }
