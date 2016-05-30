@@ -7,7 +7,6 @@
     $sql = "DELETE FROM ads WHERE adID = '$adToRemove' ";
     $mysqli->query($sql);
     
-    
     header('location: profilePage.php');
     exit;
     
