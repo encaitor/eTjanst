@@ -363,6 +363,13 @@ a.pure-button-primary {
     background: #F4F4F2;
     
 }
+
+.btn_blue {
+    padding:10px 20px; 
+    background: #8b9dc3;
+    color: #FFF;
+}
+
 .btn_red {
     background: #ED6347; 
     color: #FFF;
