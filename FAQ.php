@@ -12,7 +12,7 @@
 
         <link rel="stylesheet" href="css/formStyles.css">
 
-        <title>Contact us</title>
+        <title>FAQ</title>
     </head>    
         
     <body>
@@ -23,14 +23,23 @@
                 <ul class="pure-menu-list">
                     <li class="pure-menu-item" ><a href="index.php" class="pure-menu-link">Home</a></li>
                     <li class="pure-menu-item"><a href="feed.php" class="pure-menu-link">Ads</a></li>
-                    <li class="pure-menu-item"><a href="adForm.php" class="pure-menu-link">Create Ad</a></li>
-                    <li class="pure-menu-item"><a href="profilePage.php" class="pure-menu-link">My Profile</a></li>
+                     <?php
+                    session_start();
+                    if(isset($_SESSION['user'])) {
+                        echo "<li class='pure-menu-item'><a href='adForm.php' class='pure-menu-link'>Create Ad</a></li>";
+                        echo "<li class='pure-menu-item'><a href='profilePage.php' class='pure-menu-link'>My Profile</a></li>";
+                        echo "<li class='pure-menu-item'><a id='' href='logout.php' class='pure-menu-link'>Log Out</a></li>";
+                    } else {
+                        echo "<li class='pure-menu-item'><a href='index.php#register' class='pure-menu-link'>Register</a></li>";
+                        echo "<li class='pure-menu-item'><a id='modal_trigger' href='index.php#openModal' class='pure-menu-link'>Log In</a></li>";
+                    }
+                    ?>
                 </ul>
             </div>
         </div>
         
         <div clas="banner">
-            <h1 class="banner-head"> Profile</h1>
+            <h1 class="banner-head"> FAQ</h1>
         </div>
         
         
@@ -42,12 +51,19 @@
                     </div>
                     
                     <div class="info-box pure-u-1 pure-u-md-16-24">
-                        <div class="contactUS is-center">
-                            <p>CONTACT US</p>
+                        <div class="FAQ is-center">
+                            <p>FAQ</p>
                             <form class="pure-form pure-form-stacked">
                                 <fieldset> 
                                     <legend></legend>
-                                        Please direct any of you questions to our incredible staff: info@gamersportal.com
+                                        <p>We are a fun website that connects gamers with eachother! To join our community you must follow our rules:</p>
+                                        <p>Be atleast 13 years old</p>
+                                        <p>Your profile must represent yourself</p>
+                                        <p>You may only have one profile</p>
+                                        <p>All information you share must be truthful</p>
+                                        <p>You are not allowed to share political ideologies, racist opinios or other harrasing comments.</p>
+                                        <p>You are nor allowed to harras other gamers via spam or insults</p>
+                                        <p>Breaking these rules WILL result in a ban</p>
                                 </fieldset>
                             </form>
                             
